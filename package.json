@@ -5,8 +5,12 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "axios": "0.19.2",
+    "gh-pages": "2.2.0",
+    "prop-types": "15.7.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
+    "react-router-dom": "5.1.2",
     "react-scripts": "3.0.1"
   },
   "devDependencies": {
@@ -14,14 +18,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "react-scripts build"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "homepage": "http://carrysocks.github.io/reactWebApp"
 }

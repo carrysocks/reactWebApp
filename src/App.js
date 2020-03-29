@@ -1,27 +1,17 @@
 import React from "react";
+import { HashRouter, Route } from "react-router-dom";
+import Home from "./routes/Home";
+import About from "./routes/About";
+import Navigation from "./routes/Navigation";
 
-function Wallpaper({ name, picture }) {
+function App() {
   return (
-    <div>
-      <h2>{name}</h2>
-      <img src={picture} alt={name} />
-    </div>
+    <HashRouter>
+      <Navigation />
+      <Route path="/" exact={true} component={Home} />
+      <Route path="/about" component={About} />
+    </HashRouter>
   );
 }
 
-const WhoWallpaper = [
-  {
-    id: "1",
-    name: "joy",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQrSvP6xK9fRklE2ph3JB6FnQOHUd5RyVvFuCwqbDT9qo0inzFl"
-  }
-];
-
-function renderWho(who) {
-  return <Wallpaper key={who.id} name={who.name} picture={who.image} />;
-}
-
-export default function App() {
-  return <div>{WhoWallpaper.map(renderWho)}</div>;
-}
+export default App;
